@@ -1,113 +1,366 @@
-import Image from 'next/image'
+import Search from "@/components/Search";
+import SideBarItem from "@/components/SideBarItem";
+import Image from "next/image";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	const sideBarItems = [
+		{
+			imageSrc: "/sidebar/home.svg",
+			alt: "Home",
+			name: "Home",
+		},
+		{
+			imageSrc: "/sidebar/orders.svg",
+			alt: "Orders",
+			name: "Orders",
+		},
+		{
+			imageSrc: "/sidebar/products.svg",
+			alt: "Products",
+			name: "Products",
+		},
+		{
+			imageSrc: "/sidebar/delivery.svg",
+			alt: "Delivery",
+			name: "Delivery",
+		},
+		{
+			imageSrc: "/sidebar/marketing.svg",
+			alt: "Marketing",
+			name: "Marketing",
+		},
+		{
+			imageSrc: "/sidebar/analytics.svg",
+			alt: "Analytics",
+			name: "Analytics",
+		},
+		{
+			imageSrc: "/sidebar/orders.svg",
+			alt: "Orders",
+			name: "Orders",
+		},
+		{
+			imageSrc: "/sidebar/payments.svg",
+			alt: "Payments",
+			name: "Payments",
+		},
+		{
+			imageSrc: "/sidebar/tools.svg",
+			alt: "Tools",
+			name: "Tools",
+		},
+		{
+			imageSrc: "/sidebar/discounts.svg",
+			alt: "Discounts",
+			name: "Discounts",
+		},
+		{
+			imageSrc: "/sidebar/audience.svg",
+			alt: "Audience",
+			name: "Audience",
+		},
+		{
+			imageSrc: "/sidebar/appearance.svg",
+			alt: "Appearance",
+			name: "Appearance",
+		},
+		{
+			imageSrc: "/sidebar/plugins.svg",
+			alt: "Plugins",
+			name: "Plugins",
+		},
+	];
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+	return (
+		<div className="w-full flex bg-white">
+			{/* Sidebar */}
+			<div className="flex flex-col justify-between h-[1550px] py-4 px-[10px] w-1/6 bg-[#1E2640]">
+				<div>
+					<div className="flex items-center justify-between">
+						<div className="flex">
+							<Image
+								src={"/img.png"}
+								alt="img"
+								width={39}
+								height={39}
+								className="rounded-[4px] w-[45px]"
+							/>
+							<div className="flex flex-col items-start ml-[12.5px]">
+								<p className="text-[15px]">Nishyan</p>
+								<p className="text-[13px] underline mt-1">
+									Visit store
+								</p>
+							</div>
+						</div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+						<Image
+							src={"/arrowDownWhite.svg"}
+							alt="arrowDown"
+							height={20}
+							width={20}
+						/>
+					</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+					<div className="mt-6">
+						{sideBarItems.map((val, idx) => {
+							return (
+								<SideBarItem
+									key={idx}
+									imageSrc={val.imageSrc}
+									alt={val.alt}
+									name={val.name}
+								/>
+							);
+						})}
+					</div>
+				</div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+				<div className="bg-[#353C53] rounded-[4px] px-3 py-[10px] flex">
+					<div className="flex items-center justify-center p-[6px] px-[12px] rounded-[4px] bg-[#ffffff1a]">
+						<Image
+							src={"/sidebar/wallet.svg"}
+							alt="wallet"
+							width={24}
+							height={24}
+						/>
+					</div>
+					<div className="flex flex-col ml-3">
+						<p className="text-[13px]">Available credits</p>
+						<p className="text-[16px] font-medium">222.10</p>
+					</div>
+				</div>
+			</div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+			{/* Dashboard */}
+			<div className="w-5/6">
+				{/* Header */}
+				<div className="w-full flex items-center text-[#1A181E] py-3 px-8 border-b border-[#D9D9D9]">
+					<div className="w-1/3 flex items-center">
+						<p className="text-[15px]">Payments</p>
+						{/* <div className="ml-[16px] relative h-[14px] w-[14px]"> */}
+						<Image
+							height={14}
+							width={14}
+							src={"/howitworks.svg"}
+							alt="howitworks"
+							className="ml-[16px]"
+						/>
+						{/* </div> */}
+						<p className="ml-[6px] text-xs">How it works</p>
+					</div>
+
+					<Search
+						className="w-1/3"
+						placeholder="Search features, tutorials, etc."
+					/>
+
+					<div className="w-1/3 flex justify-end">
+						<Image
+							src={"/announcement.svg"}
+							alt="announcement"
+							width={40}
+							height={40}
+						/>
+						<Image
+							src={"/dropdown.svg"}
+							alt="dropdown"
+							width={40}
+							height={40}
+							className="ml-3"
+						/>
+					</div>
+				</div>
+
+				{/* Overview */}
+				<div className="py-8 px-8 bg-[#FAFAFA]">
+					{/* Header */}
+					<div className="w-full flex justify-between items-center">
+						<p className="text-[#1A181E] text-xl">Overview</p>
+						<div className="relative">
+							<Image
+								src={"/arrow.svg"}
+								alt="arrow"
+								width={16}
+								height={16}
+								className="absolute top-1/2 -translate-y-1/2 right-[10px]"
+							/>
+							<select className="text-base text-[#4D4D4D] rounded-[4px] border border-[#D9D9D9] py-[6px] pl-[14px] pr-[37px]">
+								<option value="lastmonth">Last Month</option>
+								<option value="thismonth">This Month</option>
+							</select>
+						</div>
+					</div>
+
+					{/* Orders */}
+					<div className="mt-6 w-full flex justify-between items-center">
+						<div
+							className="p-5 grow rounded-lg flex flex-col items-start bg-[#fff]"
+							style={{
+								boxShadow:
+									"0px 2px 6px 0px rgba(26, 24, 30, 0.04)",
+							}}
+						>
+							<p className="text-[#4D4D4D] text-base">
+								Online orders
+							</p>
+							<p className="text-[#1A181E] text-[32px] mt-4">
+								231
+							</p>
+						</div>
+
+						<div
+							className="ml-5 p-5 grow rounded-lg flex flex-col items-start bg-[#fff]"
+							style={{
+								boxShadow:
+									"0px 2px 6px 0px rgba(26, 24, 30, 0.04)",
+							}}
+						>
+							<p className="text-[#4D4D4D] text-base">
+								Amount received
+							</p>
+							<p className="text-[#1A181E] text-[32px] mt-4">
+								₹23,92,312.19
+							</p>
+						</div>
+					</div>
+
+					{/* Transactions */}
+					<p className="mt-8 text-[#1A181E] text-xl">
+						Transactions | This Month
+					</p>
+
+					<div
+						className="mt-5 pt-3 px-3 pb-6 bg-white rounded-lg"
+						style={{
+							boxShadow: "0px 2px 6px 0px rgba(26, 24, 30, 0.04)",
+						}}
+					>
+						<div className="flex justify-between">
+							<Search
+								className="w-[248px] border border-[#D9D9D9] rounded-[4px]"
+								background="bg-white"
+								placeholder="Search by order ID..."
+							/>
+							<div className="flex items-center">
+								<div className="flex items-center px-3 py-[6px] rounded-[4px] border border-[#D9D9D9]">
+									<p className="text-base text-[#4D4D4D] pr-[6px]">
+										Sort
+									</p>
+									<Image
+										src={"/sort.svg"}
+										alt="sort"
+										width={16}
+										height={16}
+									/>
+								</div>
+								<div className="ml-3 rounded-[4px] p-2 border border-[#D9D9D9]">
+									<Image
+										src={"/download.svg"}
+										alt="download"
+										width={20}
+										height={20}
+									/>
+								</div>
+							</div>
+						</div>
+
+						{/* OrderID */}
+						<div className="py-[10px] rounded-[4px] mt-3 px-3 flex justify-between items-center text-[#4D4D4D] bg-[#F2F2F2]">
+							<p className="w-1/4">Order ID</p>
+							<div className="w-1/4 flex justify-start items-center">
+								Order date{" "}
+								<Image
+									src={"/arrowDown.svg"}
+									alt="arrowDown"
+									width={8}
+									height={8}
+									className="ml-1"
+								/>
+							</div>
+							<p className="w-1/4 flex justify-end">
+								Order amount
+							</p>
+							<div className="w-1/4 justify-end flex items-center">
+								Transaction fees{" "}
+								<Image
+									src={"/info.svg"}
+									alt="Info"
+									width={14}
+									height={14}
+									className="ml-1"
+								/>
+							</div>
+						</div>
+						{[...new Array(19)].map((_, idx) => {
+							return (
+								<div
+									className="text-[14px] px-3 flex flex-col"
+									// border-b border-[#D9D9D9]
+									key={idx}
+								>
+									<div className="flex justify-between items-center py-[14px]">
+										<p className="w-1/4 text-[#146EB4]">
+											#281209
+										</p>
+										<p className="w-1/4 flex justify-start text-[#1A181E]">
+											7 July, 2023
+										</p>
+										<p className="w-1/4 flex justify-end text-[#1A181E]">
+											₹1,278.23
+										</p>
+										<p className="w-1/4 flex justify-end text-[#1A181E]">
+											₹22
+										</p>
+									</div>
+									<div className="w-full h-px bg-[#D9D9D9]" />
+								</div>
+							);
+						})}
+
+						{/* Footer */}
+						<div className="mt-6 w-full flex justify-center items-center text-[#4D4D4D] text-sm">
+							<div className="flex py-[6px] pl-[6px] pr-[12px] bg-white rounded-[4px] border border-[#D9D9D9]">
+								<Image
+									src={"/arrowLeft.svg"}
+									alt="arrowLeft"
+									width={18}
+									height={18}
+								/>
+								<p className="ml-[6px]">Previous</p>
+							</div>
+							<div className="flex items-center mx-6 text-[#4D4D4D]">
+								<p className="p-[6px]">1</p>
+								<p className="ml-2 px-[6px]">...</p>
+								<p className="ml-2 p-[6px] px-2 bg-[#146EB4] rounded-[4px] text-white">
+									10
+								</p>
+								{[11, 12, 13, 14, 15, 16, 17, 18].map(
+									(val, idx) => {
+										return (
+											<p
+												className="ml-2 px-[6px]"
+												key={idx}
+											>
+												{val}
+											</p>
+										);
+									}
+								)}
+							</div>
+							<div className="flex py-[6px] pl-[12px] pr-[6px] bg-white rounded-[4px] border border-[#D9D9D9]">
+								<p>Next</p>
+								<Image
+									src={"/arrowRight.svg"}
+									alt="arrowRight"
+									width={18}
+									height={18}
+									className="ml-[6px]"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
