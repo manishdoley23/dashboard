@@ -74,7 +74,7 @@ export default function Home() {
 	return (
 		<div className="w-full flex bg-white">
 			{/* Sidebar */}
-			<div className="flex flex-col justify-between h-[1550px] py-4 px-[10px] w-1/6 bg-[#1E2640]">
+			<div className="flex flex-col justify-between py-4 px-[10px] w-1/6 bg-[#1E2640]">
 				<div>
 					<div className="flex items-center justify-between">
 						<div className="flex">
@@ -87,7 +87,7 @@ export default function Home() {
 							/>
 							<div className="flex flex-col items-start ml-[12.5px]">
 								<p className="text-[15px]">Nishyan</p>
-								<p className="text-[13px] underline mt-1">
+								<p className="text-[13px] underline mt-1 opacity-80">
 									Visit store
 								</p>
 							</div>
@@ -125,7 +125,9 @@ export default function Home() {
 						/>
 					</div>
 					<div className="flex flex-col ml-3">
-						<p className="text-[13px]">Available credits</p>
+						<p className="text-[13px] opacity-80">
+							Available credits
+						</p>
 						<p className="text-[16px] font-medium">222.10</p>
 					</div>
 				</div>
@@ -137,7 +139,6 @@ export default function Home() {
 				<div className="w-full flex items-center text-[#1A181E] py-3 px-8 border-b border-[#D9D9D9]">
 					<div className="w-1/3 flex items-center">
 						<p className="text-[15px]">Payments</p>
-						{/* <div className="ml-[16px] relative h-[14px] w-[14px]"> */}
 						<Image
 							height={14}
 							width={14}
@@ -145,8 +146,9 @@ export default function Home() {
 							alt="howitworks"
 							className="ml-[16px]"
 						/>
-						{/* </div> */}
-						<p className="ml-[6px] text-xs">How it works</p>
+						<p className="ml-[6px] text-xs text-[#4D4D4D]">
+							How it works
+						</p>
 					</div>
 
 					<Search
@@ -175,7 +177,9 @@ export default function Home() {
 				<div className="py-8 px-8 bg-[#FAFAFA]">
 					{/* Header */}
 					<div className="w-full flex justify-between items-center">
-						<p className="text-[#1A181E] text-xl">Overview</p>
+						<p className="text-[#1A181E] text-xl font-medium">
+							Overview
+						</p>
 						<div className="relative">
 							<Image
 								src={"/arrow.svg"}
@@ -225,7 +229,7 @@ export default function Home() {
 					</div>
 
 					{/* Transactions */}
-					<p className="mt-8 text-[#1A181E] text-xl">
+					<p className="mt-8 text-[#1A181E] text-xl font-medium">
 						Transactions | This Month
 					</p>
 
@@ -329,7 +333,9 @@ export default function Home() {
 								<p className="ml-[6px]">Previous</p>
 							</div>
 							<div className="flex items-center mx-6 text-[#4D4D4D]">
-								<p className="p-[6px]">1</p>
+								<p className="py-[6px] px-3 cursor-pointer hover:bg-[#146EB4] hover:text-white rounded-[4px]">
+									1
+								</p>
 								<p className="ml-2 px-[6px]">...</p>
 								<p className="ml-2 p-[6px] px-2 bg-[#146EB4] rounded-[4px] text-white">
 									10
@@ -338,7 +344,7 @@ export default function Home() {
 									(val, idx) => {
 										return (
 											<p
-												className="ml-2 px-[6px]"
+												className="ml-2 py-[6px] px-2 cursor-pointer hover:bg-[#146EB4] hover:text-white rounded-[4px]"
 												key={idx}
 											>
 												{val}
