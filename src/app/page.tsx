@@ -74,7 +74,7 @@ export default function Home() {
 	return (
 		<div className="w-full flex bg-white">
 			{/* Sidebar */}
-			<div className="flex flex-col justify-between py-4 px-[10px] w-1/6 bg-[#1E2640]">
+			<div className="hidden lg:flex flex-col justify-between py-4 px-[10px] w-1/6 bg-[#1E2640]">
 				<div>
 					<div className="flex items-center justify-between">
 						<div className="flex">
@@ -134,7 +134,7 @@ export default function Home() {
 			</div>
 
 			{/* Dashboard */}
-			<div className="w-5/6">
+			<div className="w-full lg:w-5/6">
 				{/* Header */}
 				<div className="w-full flex items-center text-[#1A181E] py-3 px-8 border-b border-[#D9D9D9]">
 					<div className="w-1/3 flex items-center">
@@ -146,7 +146,7 @@ export default function Home() {
 							alt="howitworks"
 							className="ml-[16px]"
 						/>
-						<p className="ml-[6px] text-xs text-[#4D4D4D]">
+						<p className="ml-[6px] text-xs text-[#4D4D4D] hidden lg:block">
 							How it works
 						</p>
 					</div>
@@ -198,31 +198,31 @@ export default function Home() {
 					{/* Orders */}
 					<div className="mt-6 w-full flex justify-between items-center">
 						<div
-							className="p-5 grow rounded-lg flex flex-col items-start bg-[#fff]"
+							className="p-2 grow rounded-lg flex flex-col items-start bg-[#fff] lg:p-5"
 							style={{
 								boxShadow:
 									"0px 2px 6px 0px rgba(26, 24, 30, 0.04)",
 							}}
 						>
-							<p className="text-[#4D4D4D] text-base">
+							<p className="text-[#4D4D4D] whitespace-nowrap text-xs lg:text-base">
 								Online orders
 							</p>
-							<p className="text-[#1A181E] text-[32px] mt-4">
+							<p className="text-[#1A181E] text-[28px] lg:text-[32px] mt-4">
 								231
 							</p>
 						</div>
 
 						<div
-							className="ml-5 p-5 grow rounded-lg flex flex-col items-start bg-[#fff]"
+							className="ml-5 p-2 grow rounded-lg flex flex-col items-start bg-[#fff] lg:p-5"
 							style={{
 								boxShadow:
 									"0px 2px 6px 0px rgba(26, 24, 30, 0.04)",
 							}}
 						>
-							<p className="text-[#4D4D4D] text-base">
+							<p className="text-[#4D4D4D]  text-xs lg:text-base">
 								Amount received
 							</p>
-							<p className="text-[#1A181E] text-[32px] mt-4">
+							<p className="text-[#1A181E] text-[28px] lg:text-[32px] mt-4">
 								₹23,92,312.19
 							</p>
 						</div>
@@ -245,7 +245,7 @@ export default function Home() {
 								background="bg-white"
 								placeholder="Search by order ID..."
 							/>
-							<div className="flex items-center">
+							<div className="hidden lg:flex items-center">
 								<div className="flex items-center px-3 py-[6px] rounded-[4px] border border-[#D9D9D9]">
 									<p className="text-base text-[#4D4D4D] pr-[6px]">
 										Sort
@@ -269,7 +269,7 @@ export default function Home() {
 						</div>
 
 						{/* OrderID */}
-						<div className="py-[10px] rounded-[4px] mt-3 px-3 flex justify-between items-center text-[#4D4D4D] bg-[#F2F2F2]">
+						<div className="py-[10px] rounded-[4px] mt-3 px-3 flex justify-between items-center text-[6px] text-[#4D4D4D] bg-[#F2F2F2] lg:text-[14px]">
 							<p className="w-1/4">Order ID</p>
 							<div className="w-1/4 flex justify-start items-center">
 								Order date{" "}
@@ -278,27 +278,27 @@ export default function Home() {
 									alt="arrowDown"
 									width={8}
 									height={8}
-									className="ml-1"
+									className="ml-1 hidden lg:block"
 								/>
 							</div>
 							<p className="w-1/4 flex justify-end">
 								Order amount
 							</p>
-							<div className="w-1/4 justify-end flex items-center">
+							<div className="w-1/4 justify-end flex items-center text-center lg:w-1/4">
 								Transaction fees{" "}
 								<Image
 									src={"/info.svg"}
 									alt="Info"
 									width={14}
 									height={14}
-									className="ml-1"
+									className="ml-1 hidden lg:block"
 								/>
 							</div>
 						</div>
 						{[...new Array(19)].map((_, idx) => {
 							return (
 								<div
-									className="text-[14px] px-3 flex flex-col"
+									className="text-[10px] lg:text-[14px] px-3 flex flex-col"
 									// border-b border-[#D9D9D9]
 									key={idx}
 								>
@@ -322,7 +322,7 @@ export default function Home() {
 						})}
 
 						{/* Footer */}
-						<div className="mt-6 w-full flex justify-center items-center text-[#4D4D4D] text-sm">
+						<div className="mt-6 w-full hidden lg:flex justify-center items-center text-[#4D4D4D] text-sm">
 							<div className="flex py-[6px] pl-[6px] pr-[12px] bg-white rounded-[4px] border border-[#D9D9D9]">
 								<Image
 									src={"/arrowLeft.svg"}
